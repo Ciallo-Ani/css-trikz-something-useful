@@ -23,16 +23,16 @@
 
 #define FLASHBANG_W				"models/faqgame/flash/flashbang.mdl"
 #define ping_path				"models/expert_zone/pingtool/pingtool"
-#define circle_arrow_path		"materials/expert_zone/pingtool/circle_arrow"
-#define circle_point_path		"materials/expert_zone/pingtool/circle_point"
+#define circle_arrow_path			"materials/expert_zone/pingtool/circle_arrow"
+#define circle_point_path			"materials/expert_zone/pingtool/circle_point"
 #define grad_path				"materials/expert_zone/pingtool/grad"
 #define click_path				"expert_zone/pingtool/click.wav"
 #define dGIGN					"models/expert_zone/player/ct_gign.mdl"
 #define dGSG9					"models/expert_zone/player/ct_gsg9.mdl"
 #define dSAS					"models/expert_zone/player/ct_sas.mdl"
 #define dURBAN					"models/expert_zone/player/ct_urban.mdl"
-#define	OBS_MODE_IN_EYE 4		// follow a player in first person view
-#define	OBS_MODE_CHASE 5		// follow a player in third person view
+#define	OBS_MODE_IN_EYE 4			// follow a player in first person view
+#define	OBS_MODE_CHASE 5			// follow a player in third person view
 #define MAX_COLORS 7
 
 enum struct colors_t
