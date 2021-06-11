@@ -4,7 +4,7 @@
 	{
 		"Signatures"
 		{
-            "CEnvSoundscape::UpdateForPlayer"
+			"CEnvSoundscape::UpdateForPlayer"
 			{
 				"library"		"server"
 				"linux"			"@_ZN14CEnvSoundscape15UpdateForPlayerER11ss_update_t"
