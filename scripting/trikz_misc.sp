@@ -237,7 +237,6 @@ public void OnPluginStart()
 
 	AddNormalSoundHook(NSH_hurt);
 
-	RegConsoleCmd("say", Server_Say);
 	AddCommandListener(Command_Say, "say");
 	AddCommandListener(Command_SayTeam, "say_team");
 
@@ -2112,24 +2111,18 @@ public Action NSH_hurt(int clients[64], int& numClients, char sample[PLATFORM_MA
 	return Plugin_Continue;
 }
 
-public Action Server_Say(int client, int args)
-{
-	if(client == 0)
-	{
-		char sBuffer[256];
-		GetCmdArgString(sBuffer, sizeof(sBuffer));
-		CPrintToChatAll("{dimgray}[{white}ADVERT{dimgray}] {white}%s", sBuffer);
-		
-		return Plugin_Handled;
-	}
-	
-	return Plugin_Continue;
-}
-
 public Action Command_Say(int client, const char[] command, int argc)
 {
 	char sText[300];
 	GetCmdArgString(sText, sizeof(sText));
+
+	if(client == 0)
+	{
+		CPrintToChatAll("{dimgray}[{white}ADVERT{dimgray}] {white}%s", sText);
+		
+		return Plugin_Handled;
+	}
+
 	StripQuotes(sText);
 	
 	if(sText[0] == '!' || sText[0] == '/')
